@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import UILibraryProvider from "@/providers/UILibraryProvider";
 
 export const metadata: Metadata = {
   title: "Events Booking Application",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <UILibraryProvider>{children}</UILibraryProvider>
+      </body>
     </html>
   );
 }
