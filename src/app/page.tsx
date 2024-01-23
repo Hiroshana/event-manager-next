@@ -13,8 +13,8 @@ export default async function Home() {
   const mongoUserId = await getMongoDBUserIdOfLoggedInUser();
 
   return (
-    <div className="h-screen">
-      <UserButton afterSignOutUrl="/" />
+    <div>
+      <h1>Home page</h1>
     </div>
   );
 }

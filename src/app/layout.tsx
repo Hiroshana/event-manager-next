@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import UILibraryProvider from "@/providers/UILibraryProvider";
 import { ClerkProvider } from "@clerk/nextjs";
+import LayoutProvider from "@/providers/LayoutProvider";
 
 export const metadata: Metadata = {
   title: "Events Booking Application",
@@ -17,7 +18,9 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <UILibraryProvider>{children}</UILibraryProvider>
+          <UILibraryProvider>
+            <LayoutProvider>{children}</LayoutProvider>
+          </UILibraryProvider>
         </body>
       </html>
     </ClerkProvider>
